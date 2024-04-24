@@ -13,3 +13,17 @@ Wed 24 Apr 2024 09:34:47 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 be12052
+Wed 24 Apr 2024 09:35:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:64:5: error: conversion to non-scalar type requested
+   64 |     return (HashMap)map;
+      |     ^~~~~~
+hashmap.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d7ccc4b

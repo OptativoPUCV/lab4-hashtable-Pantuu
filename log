@@ -1,0 +1,10 @@
+Wed 24 Apr 2024 09:33:31 PM UTC: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:15: error: array subscript is not an integer
+   58 |   map->buckets[NULL];
+      |               ^
+Compilation failed
+c22b9c1

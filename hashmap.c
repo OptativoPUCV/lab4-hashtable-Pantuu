@@ -40,6 +40,8 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
+  
+  
 
 
 }
@@ -52,8 +54,14 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
+  HashMap * map = (HashMap *)malloc(sizeof(HashMap));
+  map->buckets[NULL];
+  map->size = 0;
+  map->capacity = 0;
+  map->current = -1;
+  
 
-    return NULL;
+    return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    

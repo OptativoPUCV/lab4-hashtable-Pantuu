@@ -27,3 +27,21 @@ hashmap.c:65:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 d7ccc4b
+Thu 25 Apr 2024 12:58:22 AM UTC: 
+ hashmap.c | 60 ++++++++++++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 48 insertions(+), 12 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:43: error: expected statement before ‘]’ token
+   52 |     while (map->buckets[position] != NULL)]
+      |                                           ^
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:96:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   96 |   while(map->buckets[position] != NULL && map->buckets[position]->key != NULL);
+      |   ^~~~~
+hashmap.c:97:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   97 |   {
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+7dc7e71

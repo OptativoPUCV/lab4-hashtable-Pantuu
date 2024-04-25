@@ -106,8 +106,19 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
+  if (map == NULL || key == NULL)
+    return NULL;
 
-
+  int position = hash(key, map->capacity);
+  while (map->buckets[position] != NULL)
+    {
+      if(is_equal(map->buckets[position]->key, key) == 1)
+      {
+        map->current = position;
+        return map->buckets[position];
+      }
+      position++;
+    }
     return NULL;
 }
 

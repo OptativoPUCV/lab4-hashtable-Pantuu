@@ -93,7 +93,7 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) {   
   int position = hash(key, map->capacity);
 
-  while(map->buckets[position] != NULL && map->buckets[position]->key != NULL);
+  while(map->buckets[position] != NULL && map->buckets[position]->key != NULL)
   {
     if(is_equal(map->buckets[position]->key, key) == 1)
     {
